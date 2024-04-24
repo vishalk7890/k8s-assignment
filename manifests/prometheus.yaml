@@ -1,0 +1,11 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+spec:
+  serviceMonitorSelector:
+    matchLabels:
+      app.kubernetes.io/name: prometheus
+  serviceMonitorNamespaceSelector:
+    matchNames:
+      - ingress-nginx
