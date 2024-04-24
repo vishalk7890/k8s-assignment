@@ -4,6 +4,9 @@ setup-cluster:
 	@echo "Setting up Kubernetes cluster..."
 	@./k8s-scripts/script/setup-cluster.sh
 
+setup-multinode:
+	@echo "setting up multinode"
+	@./k8s-scripts/script/worker-nodes.sh
 deploy-services:
 	@echo "Deploying services..."
 	@./k8s-scripts/script/resource.sh
